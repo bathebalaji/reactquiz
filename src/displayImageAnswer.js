@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 
-function displayImageQuest(props) {
+function displayImageAnswer(props) {
     const imageName = "\\images\\"+props.params.question;
     const questId = props.params.Id;
     const Choices = props.params.answerOption;
+    const desc = props.params.description;
+
+    console.log("o chechk all laue"+props.params.description);
     
     return (
         <> {
@@ -11,19 +14,14 @@ function displayImageQuest(props) {
                 <td className="col-container image-display">
                     <img src={imageName}></img>
                 </td>
-                <td className="col-container">
-                    <select className="choice-container" name="choices">
-                    {
-                        Choices.map((item) => (
-                            <option value={item.value}>{item.label}</option>
-
-                        ))
-                    }
-                    </select>
+                <td className="col-ans-container">
+                    <p>
+                        <span className="answer-container"> {props.params.correctAnswer} </span> {desc}
+                    </p>
                 </td>
             </tr>
         }
         </>
     );
 }
-export default displayImageQuest
+export default displayImageAnswer

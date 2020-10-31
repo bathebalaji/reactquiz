@@ -1,23 +1,24 @@
 import React, {Component} from 'react';
-import QuestProcess from './questProcess';
+import QuestProcess from './gumDropQuestProcess';
 
 const quiz = {
     "quizTitle": "Testiing React Quiz",
-    "quizSynopsis": "Fillup the blanks",
+    "quizSynopsis": "Using the gumdrop models as guides, select the correct words to complete the descriptions of different substances.",
     "questions": [
       {
         "question": "shape1.png",
         "questionType": "image",
         "answerOption": [
             {"value" : "", "label": ""},
-            {"value" : "IE", "label": "Individual helium atom"},
-            {"value" : "Chrome", "label": "Individual sodium atom"},
-            {"value" : "Firefox", "label": "Individual hydrogen atom"},
-            {"value" : "Safari", "label": "Individual oxygen atom"}
+            {"value" : "IE", "label": "IE"},
+            {"value" : "Chrome", "label": "Chrome"},
+            {"value" : "Firefox", "label": "Firefox"},
+            {"value" : "Safari", "label": "Safari"}
         ],
+        "description" : "is one of the leading browser  and also the mostly used browser in the world which is the best and just to check the line spacing when content is too large",
         "Id":"Q1",
         "point": "1",
-        "correctAnswer":"Individual oxygen atom",
+        "correctAnswer":"Chrome",
         "messageForCorrectAnswer": "Good"
       },
       {
@@ -30,16 +31,17 @@ const quiz = {
             {"value" : "Friends", "label": "Friends"},
             {"value" : "Relatives", "label": "Relatives"}
         ],
+          "description" : "is the best relationship",
           "point": "1",
           "Id":"Q2",
-          "correctAnswer":"Hockey",
+          "correctAnswer":"Family",
           "messageForCorrectAnswer": "Good"          
       }
     ]
   }
 
 
-class questContent extends Component {
+class gumDropQuestContent extends Component {
 
     render() {
         return(
@@ -52,4 +54,4 @@ class questContent extends Component {
 
 }
 
-export default questContent;
+export default gumDropQuestContent;
