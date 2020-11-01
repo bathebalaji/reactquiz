@@ -2,37 +2,37 @@ import React, {Component} from 'react';
 import QuestProcess from './questProcess';
 
 const quiz = {
-    "quizTitle": "Testiing React Quiz",
-    "quizSynopsis": "Fillup the blanks",
+    "quizTitle": "3D Interactive Assessment — Segment 1: Chemical Reactions",
+    "quizSynopsis": "The table shows some of the models created by the students. For each image, select the correct label. Two of the labels are provided.",
     "questions": [
       {
-        "question": "shape1.png",
+        "question": "helium_atom.png",
         "questionType": "image",
         "answerOption": [
             {"value" : "", "label": ""},
-            {"value" : "IE", "label": "Individual helium atom"},
-            {"value" : "Chrome", "label": "Individual sodium atom"},
-            {"value" : "Firefox", "label": "Individual hydrogen atom"},
-            {"value" : "Safari", "label": "Individual oxygen atom"}
+            {"value" : "Individual helium atom", "label": "Individual helium atom"},
+            {"value" : "Individual sodium atom", "label": "Individual sodium atom"},
+            {"value" : "Individual hydrogen atom", "label": "Individual hydrogen atom"},
+            {"value" : "Individual oxygen atom", "label": "Individual oxygen atom"}
         ],
         "Id":"Q1",
         "point": "1",
-        "correctAnswer":"Individual oxygen atom",
+        "correctAnswer":"Individual helium atom",
         "messageForCorrectAnswer": "Good"
       },
       {
-          "question" : "shape2.png",
+          "question" : "sodium_atom.png",
           "questionType":"image",
           "answerOption": [
             {"value" : "", "label": ""},
-            {"value" : "Individual", "label": "Individual is a length content"},
-            {"value" : "Family", "label": "Family"},
-            {"value" : "Friends", "label": "Friends"},
-            {"value" : "Relatives", "label": "Relatives"}
+            {"value" : "Individual helium atom", "label": "Individual helium atom"},
+            {"value" : "Individual sodium atom", "label": "Individual sodium atom"},
+            {"value" : "Individual hydrogen atom", "label": "Individual hydrogen atom"},
+            {"value" : "Individual oxygen atom", "label": "Individual oxygen atom"}
         ],
           "point": "1",
           "Id":"Q2",
-          "correctAnswer":"Hockey",
+          "correctAnswer":"Individual sodium atom",
           "messageForCorrectAnswer": "Good"          
       }
     ]
@@ -44,7 +44,6 @@ class questContent extends Component {
     render() {
         return(
             <div>
-                <h3> From the react Fill up blanks page</h3>
                 <QuestProcess quiz={quiz}/>
             </div>
         );

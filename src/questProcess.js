@@ -9,21 +9,19 @@ class questProcess extends Component {
     }
     checkAnswer() {
         document.getElementById("ResultContainer").innerHTML = "";
+        
+        var temp = document.getElementsByClassName("fill-in-blanks-answers");
+        for (var n = 0; n < temp.length; n++)
+            temp[n].style.display = 'block'
         let answers = this.props.quiz.questions;
         let results = [answers.length];
 
         for (var i = 0; i < answers.length; i++) {
-            let userInputs = document.getElementsByName(answers[i].Id);
-            let enteredValue = "";
-            userInputs.forEach((nodes) => {
-                enteredValue = enteredValue + nodes.value;
-                if (userInputs.length > 1) {
-                    enteredValue = enteredValue + ","
-                }
-            });
-
-            if (enteredValue.lastIndexOf(",") !== -1)
-                enteredValue = enteredValue.slice(0, -1);
+            let userInputs = document.getElementById(answers[i].Id).selectedIndex;
+            console.log("IO os "+userInputs+"     sd:"+document.getElementsByTagName("option")[userInputs].value);
+            
+            let enteredValue = document.getElementsByTagName("option")[userInputs].value;
+       
 
             if ((answers[i].correctAnswer).toLowerCase() === enteredValue.toLowerCase())
                 results[i] = "Pass";
@@ -51,6 +49,9 @@ class questProcess extends Component {
                                 </table>
                             </div>
                         </div>
+                        <button onClick={this.checkAnswer}>Check Answer</button>
+                    </div>
+                    <div id="ResultContainer">
                     </div>
                     <div className="fill-in-blanks-answers">
                         <h4>Answer</h4>
@@ -65,8 +66,7 @@ class questProcess extends Component {
                         </div>
                     </div>
 
-                    {/* <div id="ResultContainer">
-                    </div> */}
+          
                 </div>
             </div>
         )

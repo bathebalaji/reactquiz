@@ -31,6 +31,7 @@ class FillupBlanks extends Component {
     render() {
         return(
             <div>
+                <h3> From the react Fill up blanks page</h3>
                 <FillupQuestions quiz={quiz}/>
             </div>
         );
