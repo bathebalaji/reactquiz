@@ -3,6 +3,7 @@ import './App.css';
 import FillupBlanks from './FillupBlanks';
 import QuestImageContent from './questContent';
 import GumDropQuestContent from './gumDropQuestContent';
+import CardSortQuiz from './cardsort_quiz';
 
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
         </p>
         <QuestImageContent />
         {/* <GumDropQuestContent /> */}
+
+        <CardSortQuiz />
 
     </div>
   );
