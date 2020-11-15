@@ -270,3 +270,23 @@ body {
   width: auto;
   padding: 15px;
 }
+
+/* Embed Media CSS*/
+.ans-embedmedia {
+  width: 70%;
+  background-color: #16ab39;
+  color:#ffffff;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  padding : 0.8px 15px;
+  font-size: 0.85714286rem;
+  border-radius: 0.28571429rem;
+  border: 1px solid;
+}
+.embed-type {
+  margin-top: 20px;
+}
+.quest-embedmedia {
+  font-size: 0.85714286rem;
+  font-weight: bold;
+}
