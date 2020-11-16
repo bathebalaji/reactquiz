@@ -21,11 +21,11 @@ function App() {
    <p>
         <FillupBlanks/>
         </p>
-        <SVGDraw />
-        <QuestImageContent />
+        {/* <SVGDraw />
+        <QuestImageContent /> */}
         {/* <GumDropQuestContent /> */}
 
-        <CardSortQuiz />
+        {/* <CardSortQuiz /> */}
 
     </div>
   );
