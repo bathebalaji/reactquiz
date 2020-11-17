@@ -289,4 +289,36 @@ body {
 .quest-embedmedia {
   font-size: 0.85714286rem;
   font-weight: bold;
+
 }
+
+/* For Drawing and stamps*/
+.canvas-stage {
+  border: 1px solid;
+  max-width: 800px;
+  margin-left: 80px;
+}
+.drawing-button-pen {
+  composes: icon;
+  content: icon;
+  background-color: #fff;
+  margin-left: 80px;
+}
+.drawing-button-line {
+  composes: icon;
+  content: icon;
+  background-color: #fff;
+}
+.drawing-button-circle{
+content: icon;
+background-color: #fff;
+}
+
+.drawing-button-rectangle{
+  content: icon;
+  background-color: #fff;
+  }
+  .drawing-button-triangle{
+    content: icon;
+    background-color: #fff;
+    }

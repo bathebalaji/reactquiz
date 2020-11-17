@@ -91,7 +91,9 @@ function Drawing_Stamp() {
 
   return (
     <div>
-      <select
+      <h5>Illustration:</h5>
+      <p>Draw a mixture. Label the the physical properties that stayed the same.</p>
+      {/* <select
         value={tool}
         onChange={(e) => {
           setTool(e.target.value);
@@ -102,16 +104,23 @@ function Drawing_Stamp() {
         <option value="circle">Circle</option>
         <option value="eraser">Eraser</option>
         <option value="triangle">Triangle</option>
-      </select>
+      </select> */}
+      <button value="pen" className="drawing-button-pen" onClick={e =>setTool(e.target.value)}><img src="images/Pen.png"></img></button>
+      <button value="pen" className="drawing-button-line" onClick={e =>setTool(e.target.value)}><img src="images/Line.png"></img></button>
+      <button value="circle" className="drawing-button-circle" onClick={e => setTool(e.target.value)} ><img src="images/Circle.png"/></button>
+      <button value="rect"className="drawing-button-rectangle"  onClick={e => setTool(e.target.value)}><img src="images/Rectangle.png"></img></button>
+      <button value="triangle" className="drawing-button-triangle" onClick={e =>setTool(e.target.value)}><img src="images/triangle.png"></img></button>
+      <br></br><br></br>
       <Stage
         width={800}
         height={500}
         onMouseDown={handleMouseDown}
         onMousemove={handleMouseMove}
         onMouseup={handleMouseUp}
+        className="canvas-stage"
       >
         <Layer>
-          <Text text="Just start drawing" x={5} y={30} />
+          {/* <Text text="Just start drawing" x={5} y={30} /> */}
           {lines.map((line, i) => (
             <Line
               key={i}
@@ -126,7 +135,7 @@ function Drawing_Stamp() {
             />
           ))}
 
-          <Text text="Just klsdjfjasdklfj drawing" x={205} y={30} />
+          {/* <Text text="Just klsdjfjasdklfj drawing" x={205} y={30} /> */}
           {rects.map((rect, i) => (
             <Rect
               key={i}

@@ -1,18 +1,41 @@
 import React, { Component, PropTypes } from 'react';
 import RichTextEditor from 'react-rte';
+// import CKEditor from "react-ckeditor-component";
+// const loadScript = require('load-script')
+// //const questContent = this.props.all.question;
 
-//const questContent = this.props.all.question;
+// var defaultScriptUrl = 'https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js';
 
 class media_display extends Component {
-    
+
     constructor(props) {
         super(props);
-        
-    }
+  }
 
-    // static propTypes = {
-    //     onChange: PropTypes.func
-    // };
+  //load ckeditor script as soon as component mounts if not already loaded
+//   componentDidMount() {
+//     if (!this.state.isScriptLoaded) {
+//       loadScript(this.props.scriptUrl, this.onLoad);
+//     } else {
+//       this.onLoad();
+//     }
+//   }
+        
+
+    // updateContent(newContent) {
+    //     this.setState = {
+    //         content: newContent
+    //     };
+    // }
+
+    // onChange(evt) {
+    //     console.log("onChange fired with event info: ", evt);
+    //     var newContent = evt.editor.getData();
+    //     this.setState = {
+    //         content: newContent
+    //     };
+    // }
+
 
     state = {
         value: RichTextEditor.createEmptyValue()
@@ -25,26 +48,40 @@ class media_display extends Component {
 
     render() {
         const toolbarConfig = {
-            // Optionally specify the groups to display (displayed in the order listed).
-            display: ['HISTORY_BUTTONS','INLINE_STYLE_BUTTONS', 'BLOCK_TYPE_BUTTONS', 'LINK_BUTTONS', 'BLOCK_TYPE_DROPDOWN'],
+
+            display: ['HISTORY_BUTTONS', 'INLINE_STYLE_BUTTONS', 'BLOCK_TYPE_BUTTONS', 'LINK_BUTTONS', 'BLOCK_TYPE_DROPDOWN'],
             INLINE_STYLE_BUTTONS: [
-              {label: 'Bold', style: 'BOLD', className: 'custom-css-class'},
-              {label: 'Italic', style: 'ITALIC'},
-              {label: 'Underline', style: 'UNDERLINE'}
+                { label: 'Bold', style: 'BOLD', className: 'custom-css-class' },
+                { label: 'Italic', style: 'ITALIC' }
             ],
-                BLOCK_TYPE_DROPDOWN: [
-                  {label: 'Normal', style: 'unstyled'},
-                  {label: 'Heading Large', style: 'header-one'},
-                  {label: 'Heading Medium', style: 'header-two'},
-                  {label: 'Heading Small', style: 'header-three'}
-                ],
+            BLOCK_TYPE_DROPDOWN: [
+                { label: 'Normal', style: 'unstyled' },
+                { label: 'Heading Large', style: 'header-one' },
+                { label: 'Heading Medium', style: 'header-two' },
+                { label: 'Heading Small', style: 'header-three' }
+            ],
             BLOCK_TYPE_BUTTONS: [
-              {label: 'UL', style: 'unordered-list-item'},
-              {label: 'OL', style: 'ordered-list-item'}
+                { label: 'Subscript', style: 'subscript' },
+                { label: 'Superscript', style: 'superscript' },
+                { label: 'UL', style: 'unordered-list-item' },
+                { label: 'OL', style: 'ordered-list-item' }
             ]
-          };
+        };
         return (
             <div>
+                {/* <CKEditor
+                    activeClass="p10"
+                    config={{
+                        toolbar: [ 
+                            
+                            {name: 'clipboard',items:['undo','redo']
+                        }]
+                  }}
+                    content={this.state.content}
+                    events={{
+                        "change": this.onChange
+                    }}
+                /> */}
 
                 <span className="quest-embedmedia">
                     {this.props.all.question}
@@ -57,11 +94,7 @@ class media_display extends Component {
                         value={this.state.value}
                         onChange={this.onChange}
                     />
-                    {/* <textarea
-                rows={5}
-                cols={75}
-                >
-                </textarea> */}
+        
                 </div>
 
                 <div className="ans-embedmedia">
