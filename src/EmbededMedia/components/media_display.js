@@ -52,17 +52,16 @@ class media_display extends Component {
             display: ['HISTORY_BUTTONS', 'INLINE_STYLE_BUTTONS', 'BLOCK_TYPE_BUTTONS', 'LINK_BUTTONS', 'BLOCK_TYPE_DROPDOWN'],
             INLINE_STYLE_BUTTONS: [
                 { label: 'Bold', style: 'BOLD', className: 'custom-css-class' },
-                { label: 'Italic', style: 'ITALIC' }
+                { label: 'Subscript', style: 'SUBSCRIPT' , className:'custom-css-toolbar'}
             ],
             BLOCK_TYPE_DROPDOWN: [
                 { label: 'Normal', style: 'unstyled' },
                 { label: 'Heading Large', style: 'header-one' },
                 { label: 'Heading Medium', style: 'header-two' },
-                { label: 'Heading Small', style: 'header-three' }
+                { label: 'Heading Small', style: 'header-three' },
+                { label: 'Heading Extra Small', style: 'header-four' }
             ],
             BLOCK_TYPE_BUTTONS: [
-                { label: 'Subscript', style: 'subscript' },
-                { label: 'Superscript', style: 'superscript' },
                 { label: 'UL', style: 'unordered-list-item' },
                 { label: 'OL', style: 'ordered-list-item' }
             ]

@@ -291,6 +291,9 @@ body {
   font-weight: bold;
 
 }
+.custom-css-toolbar {
+  font-size: 20em;
+}
 
 /* For Drawing and stamps*/
 .canvas-stage {
@@ -321,4 +324,92 @@ background-color: #fff;
   .drawing-button-triangle{
     content: icon;
     background-color: #fff;
+    }
+  
+    /* Adding css for Own designing Text area*/
+    .my-little-app {
+      width: 500px;
+      margin: 20px;
+      height:200px;
+    }
+    
+    .draft-editor-wrapper {
+      border: 1px solid #ccc;
+      min-height: 80px;
+      height: auto;
+    }
+
+    .inline-style-options {
+      border-block: 1px;
+      background-color: #fff;
+    }
+    
+
+    /* Grid Map styling*/
+    .grid-img-container {
+      text-align: center;
+      line-height: 2;
+    }
+    .grid-img-container img {
+
+      height: 100px;
+      width: 105px;
+      padding: 1%;
+      vertical-align: middle;
+    }
+
+    .grid-conclusion {
+      background-color:rgb(159, 197, 232);;
+    }
+    .grid-table-container {
+      width: 100%;
+      background: #ffffff;
+      margin: 1em 0em;
+      border: 1px 2px 1px 2px solid rgba(34,36,38,0.15);
+      box-shadow: none;
+      border-radius: 0.28571429rem;
+      text-align: left;
+      color: rgba(0,0,0,0.87);
+      border-collapse: collapse;
+      border-spacing: 0px;
+      line-height: 1.5;
+      font-size: 0.8em;
+      
+    }
+    .grid-col-container {
+      border: 2px solid rgba(34,36,38,0.15);
+      border-collapse: separate;
+      box-shadow: inherit;
+      text-align: left;
+      vertical-align: top;
+      width: 15%;
+      line-height: 1.425;
+      padding: 15px;
+    }
+    .grid-col-container.questionpattern {
+      font-weight: bold;
+      line-height: 1.425;
+    }
+    .grid-col-container.grid-col-empty {
+      background-color: rgb(204,204,204);
+    }
+    .grid-answer-container {
+      align:center;
+      width: 10%;
+      background: #ffffff;
+      margin-left: 4%;
+      margin-top: 3%;
+      border: 1px 2px 1px 2px solid rgba(34,36,38,0.15);
+      box-shadow: none;
+      border-radius: 0.28571429rem;
+      text-align: left;
+      color: rgba(0,0,0,0.87);
+      border-collapse: collapse;
+      border-spacing: 0px;
+      line-height: 1.5;
+      font-size: 0.8em;
+    }
+    .answerWrapperBody {
+      background-color: #16ab39;
+      width:100%
     }
