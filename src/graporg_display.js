@@ -2,19 +2,16 @@ import React, { Component } from 'react';
  import Editor from 'draft-js-plugins-editor';
 import createToolbarPlugin, { Separator } from 'draft-js-static-toolbar-plugin';
 import 'draft-js-static-toolbar-plugin/lib/plugin.css';
-import createUndoPlugin from 'draft-js-undo-plugin';
+// import createUndoPlugin from './draft-js-undo-plugin';
 import {  EditorState, getDefaultKeyBinding, KeyBindingUtil, RichUtils, Modifier } from 'draft-js';
 import createStyles from 'draft-js-custom-styles';
-import createMathjaxPlugin from 'draft-js-mathjax-plugin';
-import ReactHtmlParser from 'react-html-parser';
-import createTablePlugin from 'draft-js-table-plugin';
+import createMathjaxPlugin from 'draft-js-mathjax-plugin'
 
 // import {BoldButton, ItalicButton,} from 'draft-js-buttons';
 //import editorStyles from './editorStyles.css';
 
-const undoPlugin = createUndoPlugin();
-const { UndoButton, RedoButton } = undoPlugin;
-// const tablePlugin = createTablePlugin
+// const undoPlugin = createUndoPlugin();
+// const { UndoButton, RedoButton } = undoPlugin;
 
 const mathjaxConfig = {
     macros: {
@@ -43,47 +40,6 @@ function keyBindingFunction(event) {
 
     return getDefaultKeyBinding(event);
 }
-// class HeadlinesPicker extends Component {
-//     componentDidMount() {
-//         setTimeout(() => { window.addEventListener('click', this.onWindowClick); });
-//     }
-
-//     componentWillUnmount() {
-//         window.removeEventListener('click', this.onWindowClick);
-//     }
-
-//     onWindowClick = () =>
-//         // Call `onOverrideContent` again with `undefined`
-//         // so the toolbar can show its regular content again.
-//         this.props.onOverrideContent(undefined);
-
-//     render() {
-//         const buttons = [HeadlineOneButton, HeadlineTwoButton, HeadlineThreeButton];
-//         return (
-//             <div>
-//                 {buttons.map((Button, i) => // eslint-disable-next-line
-//                     <Button key={i} {...this.props} />
-//                 )}
-//             </div>
-//         );
-//     }
-// }
-
-// class HeadlinesButton extends Component {
-//     onClick = () =>
-//         // A button can call `onOverrideContent` to replace the content
-//         // of the toolbar. This can be useful for displaying sub
-//         // menus or requesting additional information from the user.
-//         this.props.onOverrideContent(HeadlinesPicker);
-
-//     render() {
-//         return (
-//             <div>
-//                 <button onClick={this.onClick} > H </button>
-//             </div>
-//         );
-//     }
-// }
 
 const toolbarPlugin = createToolbarPlugin();
 const { Toolbar } = toolbarPlugin;
@@ -94,17 +50,17 @@ const text = 'In this editor a toolbar shows up once you select part of the text
 
 const blockTypeButtons = [
     {
-        value: '<i>OL</i>',
+        value: 'Ordered List',
         block: 'ordered-list-item'
     },
     {
-        value: '<i>UL</i>',
+        value: 'Unordered List',
         block: 'unordered-list-item'
     }
 ];
 
 
-export default class customToolbarEditor extends Component {
+class graporg_display extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -142,25 +98,25 @@ export default class customToolbarEditor extends Component {
     renderInlineStyleButton(value, style) {
         console.log("Inside the renderInstyle" + value);
         return (
-            <button className="button-style-options"
+            <button
                 key={style}
                 value={value}
                 data-style={style}
                 onClick={this.toggleInlineStyle}
             >
-                {ReactHtmlParser(value)} </button>
+                {value} </button>
         );
     }
 
     renderBlockTypeButton(value, block) {
         return (
-            <button className="button-style-options"
+            <button
                 key={block}
                 value={value}
                 data-style={block}
                 onClick={this.toggleBlockType}
             >
-                {ReactHtmlParser(value)} </button>
+                {value} </button>
         );
     }
 
@@ -214,12 +170,6 @@ export default class customToolbarEditor extends Component {
         });
     }
 
-    // toggleTextTransform(selValue) {
-    //     console.log("Mouse down event " + selValue);
-    //     return this.setState({
-    //         editorState: styles.textTransform.toggle(this.state.editorState, selValue)
-    //     });
-    // }
 
     // To implement changes when short cut keys are pressed
     handleKeyCommand = command => {
@@ -227,10 +177,6 @@ export default class customToolbarEditor extends Component {
             this.state.editorState,
             command
         );
-        // If RichUtils.handleKeyCommand didn't find anything, check for our custom strikethrough command and call `RichUtils.toggleInlineStyle` if we find it.
-        // if (!this.state.editorState && command === 'strikethrough') {
-        //     this.state.editorState = RichUtils.toggleInlineStyle(this.state.editorState, 'STRIKETHROUGH');
-        // }
 
         if (!this.state.editorState && command === 'highlight') {
             this.state.editorState = RichUtils.toggleInlineStyle(this.state.editorState, 'HIGHLIGHT');
@@ -247,26 +193,25 @@ export default class customToolbarEditor extends Component {
     render() {
         const inlineStyleButtons = [
             {
-                value: '<strong>B</strong>',
+                value: 'B',
                 style: 'BOLD'
             },
             {
-                value: '<i>I</i>',
+                value: 'I',
                 style: 'ITALIC'
             },
             {
-                value: 'X<sup>2</sup>',
-                style: 'SUPERSCRIPT'
+                value: 'Highlight',
+                style: 'HIGHLIGHT'
             },
             {
                 value: 'X<sub>2</sub>',
                 style: 'SUBSCRIPT'
             },
             {
-                value: '<mark>A</mark>',
-                style: 'HIGHLIGHT'
+                value: 'Superscript',
+                style: 'SUPERSCRIPT'
             }
-
         ];
         const options = x => x.map(fontSize => {
             return <option key={fontSize} value={fontSize}>{fontSize}</option>;
@@ -275,9 +220,6 @@ export default class customToolbarEditor extends Component {
             <div className="my-little-app">
 
                 <div className="inline-style-options">
-                    <span className="button-style-options"><UndoButton /></span>
-                    <span className="button-style-options"><RedoButton /></span>
-                
                     {inlineStyleButtons.map((button, index) => {
                         <h2>asdfa</h2>
                         return this.renderInlineStyleButton(button.value, button.style);
@@ -285,26 +227,27 @@ export default class customToolbarEditor extends Component {
                     {blockTypeButtons.map((button, index) => {
                         return this.renderBlockTypeButton(button.value, button.block);
                     })}
-                    <button className="button-style-options" value="A|" data-style="fontSize" onClick={this.toggleFont}>A&#8597;</button>
+                    <button value="A|" data-style="fontSize" onClick={this.toggleFont}>A|</button>
                     <select onChange={e => this.toggleTextTransform(e.target.value)}>
                         {options(['uppercase', 'capitalize', 'lowercase'])}
                     </select>
                     <select onChange={e => this.toggleColor(e.target.value)}>
                         {options(['Red', 'Green', 'Blue', 'Yellow', 'Purple'])}
                     </select>
-                    <button className="button-style-options" onClick={this.onKeyPress}>Math</button>
+                    <button onClick={this.onKeyPress}>Add integral</button>
                 </div>
                 <div onClick={this.focus} className="draft-editor-wrapper">
                     <Editor
                         editorState={this.state.editorState}
                         onChange={this.onChange}
-                        plugins={[undoPlugin]}
+                        // plugins={}
                         keyBindingFn={keyBindingFunction}
                         handleKeyCommand={this.handleKeyCommand}
                         ref={(element) => { this.editor = element; }}
                         customStyleMap={styleMap}
                         customStyleFn={customStyleFn}
                     />
+                        
                     {/* <Toolbar> */}
 
                     {/* </Toolbar> */}
@@ -313,3 +256,5 @@ export default class customToolbarEditor extends Component {
         );
     }
 }
+
+export default graporg_display;

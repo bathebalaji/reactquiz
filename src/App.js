@@ -11,6 +11,8 @@ import DraftEditor from './EmbededMedia/customToolbarEditor'
 //import SampleMath from './TestMath'
 import SVGDraw from './Drawing_Stamp';
 import GridMap from './GridMap/grid_quiz';
+import GraphOrg from './graphicorgnaizer_quiz'
+import ClaimER from './claim_quiz';
 
 let tempArr = [{"opt1":"Balaji"},{"opt2":"Kumar"} ]
 
@@ -18,9 +20,11 @@ function App() {
   return (
 
     <div>
-  <h4> Grid Map</h4>
-<GridMap />
+  {/* <h4> Grid Map</h4> */}
+{/* <GridMap /> */}
   {/* <SampleMath /> */}
+  {/* <GraphOrg/> */}
+  <ClaimER />
   {/* <DraftEditor/> */}
   {/* <SVGDraw />  */}
   {/* <CKEdit /> */}

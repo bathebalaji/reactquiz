@@ -339,9 +339,27 @@ background-color: #fff;
       height: auto;
     }
 
-    .inline-style-options {
+    .button-style-options {
       border-block: 1px;
       background-color: #fff;
+      display: inline-block;
+      box-sizing: border-box;
+      font-size: 14px;
+      text-align: center;
+      padding: 10px 15px 9px 15px;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      vertical-align: middle;
+      text-decoration: none;
+      zoom: 1;
+      position: relative;
+      color: rgba(0,0,0,0.85);
+      border-radius: 2px;
+      background: rgba(255,255,255,0.97);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.22);
+      margin-right: 5px;
+      margin-bottom: 4px;      
     }
     
 
@@ -412,4 +430,30 @@ background-color: #fff;
     .answerWrapperBody {
       background-color: #16ab39;
       width:100%
+    }
+
+    /*Graphic Organizer*/
+    .grporgabout {
+      padding: 0.25em 1em;
+      background: #f5f5f5;
+      font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      font-size: 0.85em;
+    }
+
+    /* Claim Evidence Reasoning */
+    .claimscene {
+      padding:0.25em;
+      font-size: 0.9em;
+      line-height: 1.435;
+      color:rgba(0, 0, 0, 0.87)
+    }
+
+    .claimspec .specHead{
+      font-weight: bold;
+    }
+
+    .claimspec img {
+      height: auto;
+      width: 300px;
+      padding: 1%;
     }

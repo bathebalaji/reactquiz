@@ -1,6 +1,5 @@
 import React from "react";
-import Editor from 'draft-js-plugins-editor';
-import { EditorState, RichUtils } from "draft-js";
+import {Editor, EditorState, RichUtils } from "draft-js";
 import {BoldButton, ItalicButton} from "draft-js-richbuttons-plugin"
 import createToolbarPlugin from 'draft-js-static-toolbar-plugin'
 //import editorStyles from './editorStyles.css';
@@ -22,17 +21,17 @@ class PageContainer extends React.Component {
 		});
 	};
 
-	handleKeyCommand = command => {
-		const newState = RichUtils.handleKeyCommand(
-			this.state.editorState,
-			command
-		);
-		if (newState) {
-			this.onChange(newState);
-			return "handled";
-		}
-		return "not-handled";
-	};
+		handleKeyCommand = command => {
+			const newState = RichUtils.handleKeyCommand(
+				this.state.editorState,
+				command
+			);
+			if (newState) {
+				this.onChange(newState);
+				return "handled";
+			}
+			return "not-handled";
+		};
 
 	onUnderlineClick = () => {
 		this.onChange(
@@ -83,8 +82,6 @@ class PageContainer extends React.Component {
                 <div>
                   <BoldButton {...externalProps} />
                   <ItalicButton {...externalProps} />
-                  {/* <UnderlineButton {...externalProps} /> */}
-
                 </div>
               )
             }
