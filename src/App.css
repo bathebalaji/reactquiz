@@ -457,3 +457,110 @@ background-color: #fff;
       width: 300px;
       padding: 1%;
     }
+
+    /* Engg Quiz related */
+    .quest-content {
+      margin-top: 25px;
+      font-size:0.9em;
+      line-height: 1.435;
+      color: rgba(0,0,0,0.87);
+    }
+
+    .quiz-synopsis ,.engg-quiz{
+      display: block;
+      font-size: 0.9em;
+      line-height: 1.435;
+      color: rgba(0,0,0,0.87);
+    }
+    
+    .quest-content img {
+      height: auto;
+      width: 491px;
+      align-self: center;
+      padding: 1%;
+    }
+
+    .engg-choice-table {
+      font-size: 0.9em;
+      width: 100%;
+      background: #ffffff;
+      margin: 1em 0em;
+      display: table;
+      box-shadow: none;
+      border-radius: 0.28571429rem;
+      text-align: left;
+      color: rgba(0,0,0,0.87);
+      border-collapse: collapse;
+      border: 1px solid rgba(34,36,38,0.15);
+      border-spacing: 0px;
+    }
+
+    .engg-choice-row {
+      display: table-row;
+      height: 120px;
+      border-top: 2px dashed rgba(34,36,38,0.15);
+    }
+    .engg-choice-col{
+      border-right: 1px solid rgba(34, 36, 38, 0.15);
+      width: 15%;
+    }
+    .input-cell {
+      max-width: 170px;
+      display: flex;
+      flex-direction: row;
+      border:1px solid rgba(34, 36, 38, 0.15);
+      margin: 20px;
+    }
+    .input-buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      line-height:1.5;
+      cursor: pointer;
+      margin:0px 3.5px 0px 0px;
+    }
+    .input-button {
+      position: relative;
+      font-size: 1em;
+      text-align: center;
+    
+    }
+    .input-cell-value {
+      height:60px;
+      font-size: 1.5em;
+      text-align: center;
+      display: flex;
+      width: 70%;
+    }
+    .input-value {
+      width: 70%;
+      height: 40px;
+      text-align: center;
+      margin: 0;
+      font-size: 1.5em;
+      border: 0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+      border-right: none;
+      color: rgba(34, 36, 38, 0.85);
+    }
+
+     .input-cell-decimal {
+      position: relative;
+      border-left: 1px solid rgba(34,36,38,0.15);
+      border-left: none;
+      width: 20%;
+    }
+    .input-cell-unit {
+      height:35px;
+      border-left: 1px solid rgba(34,36,38,0.15);
+      text-align: center;
+      font-size: 1.5em;
+      padding: 0.67861429em 1em;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }

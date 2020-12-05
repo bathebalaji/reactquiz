@@ -13,6 +13,7 @@ import SVGDraw from './Drawing_Stamp';
 import GridMap from './GridMap/grid_quiz';
 import GraphOrg from './graphicorgnaizer_quiz'
 import ClaimER from './claim_quiz';
+import EnggQuiz from './engg_quiz';
 
 let tempArr = [{"opt1":"Balaji"},{"opt2":"Kumar"} ]
 
@@ -24,7 +25,8 @@ function App() {
 {/* <GridMap /> */}
   {/* <SampleMath /> */}
   {/* <GraphOrg/> */}
-  <ClaimER />
+  {/* <ClaimER /> */}
+  <EnggQuiz/>
   {/* <DraftEditor/> */}
   {/* <SVGDraw />  */}
   {/* <CKEdit /> */}
