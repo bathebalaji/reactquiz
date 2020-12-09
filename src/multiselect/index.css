@@ -1,0 +1,138 @@
+
+.choices {
+  border-collapse: collapse;
+  border-spacing: 5px 5px;
+  min-width: 50%;
+  margin: 1em 0;
+  
+}
+
+/* 
+.choices tr td {
+    vertical-align: top;
+    padding: .5em .5em;
+    border: 0;
+} */
+
+.mc-input {
+  width: 60px;
+  /* height: 50px; */
+}
+
+.choices td .check_box {
+  display: inline-block;
+  vertical-align: 2px;
+}
+td {
+  display: table-cell;
+  vertical-align: inherit;
+}
+
+.choices tr {
+  cursor: pointer;
+}
+div {
+  display: block;
+}
+.redactor-html {
+  content: '';
+  display: block;
+  clear: both;
+}
+.field {
+  clear: both;
+  margin: 0em 0em 1em;
+}
+
+.mcrow
+{
+  border: 1px solid #ddd;
+  /* border-spacing: 15px; */
+}
+
+.questionstyle
+{
+  height: 71px;
+    width: 583px;
+}
+
+/* .radioCustomButton {
+  position: absolute;
+  width: auto;
+  opacity: 0;
+} */
+
+/* .radioCustomButton,
+.radioCustomLabel {
+  display: inline-block;
+  vertical-align: 2px;
+  cursor: pointer;
+} */
+
+.radioCustomLabel {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 1.5rem 2.5rem 1.5rem 5rem;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* .radioCustomButton ~ .radioCustomLabel:before {
+  position: absolute;
+  top: 20px;
+  left: 38px;
+  width: 20px;
+  height: 20px;
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+   background: #fff; 
+  border: 1px solid #bbb;
+   transition: all 0.3s;
+} */
+
+/* .radioCustomButton:checked ~ .radioCustomLabel:before {
+  content: '';
+  background: #8bc53f ;
+  background-size: 27px;
+  border-color: #8bc53f;
+} */
+
+.correctans
+{
+	    background: #5bc748;
+    color: #fff;
+}
+
+.mccorrectans {
+  background: #16ab39 !important;
+  color: #fff;
+}
+
+/* .table {
+   border: 1px solid black; 
+   border: 1px solid #ddd; 
+ }   */
+
+
+ .mcwrongans {
+  background: #ab1616 !important;
+  color: #fff;
+}
+.questionfold
+{
+  width: 850px;
+    height: 90px;
+}
+
+.divstyle
+{
+  margin-left: 35px;
+    margin-right: 50px;
+}
+.newcard
+{
+  padding-left: 50px;
+  padding-right: 50px;
+}

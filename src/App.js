@@ -14,19 +14,37 @@ import GridMap from './GridMap/grid_quiz';
 import GraphOrg from './graphicorgnaizer_quiz'
 import ClaimER from './claim_quiz';
 import EnggQuiz from './engg_quiz';
+import MultiChoice from './multichoice/MultiChoice';
+import MathSym from './finalMath';
+import MathEdit from './EditMath';
+ import Qeditor from './quillEditor';
+
 
 let tempArr = [{"opt1":"Balaji"},{"opt2":"Kumar"} ]
 
+
+
 function App() {
+  // componentDidMount(){
+  //   const script=document.createElement("script");
+  //   script.src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML";
+  //   script.async = true;
+  //   document.body.appendChild(script);
+  // }
+
   return (
 
     <div>
   {/* <h4> Grid Map</h4> */}
 {/* <GridMap /> */}
+<Qeditor />
+<MathEdit />
+{/* <MathSym /> */}
   {/* <SampleMath /> */}
+  {/* <MultiChoice /> */}
   {/* <GraphOrg/> */}
   {/* <ClaimER /> */}
-  <EnggQuiz/>
+  {/* <EnggQuiz/> */}
   {/* <DraftEditor/> */}
   {/* <SVGDraw />  */}
   {/* <CKEdit /> */}
