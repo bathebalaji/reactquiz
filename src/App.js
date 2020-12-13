@@ -18,7 +18,8 @@ import MultiChoice from './multichoice/MultiChoice';
 import MathSym from './finalMath';
 import MathEdit from './EditMath';
  import Qeditor from './quillEditor';
- import Chk from './ChooseChkBox/MultiChoice'
+ import Chk from './ChooseChkBox/MultiChoice';
+ import {Symbols} from './Symbols';
 
 
 let tempArr = [{"opt1":"Balaji"},{"opt2":"Kumar"} ]
@@ -40,6 +41,7 @@ function App() {
 {/* <GridMap /> */}
 {/* <Qeditor />
 <MathEdit /> */}
+{/* <Symbols/> */}
 <MathSym />
   {/* <SampleMath /> */}
   {/* <MultiChoice /> */}
