@@ -45,7 +45,7 @@ function App() {
 <MathSym />
   {/* <SampleMath /> */}
   {/* <MultiChoice /> */}
-  {/* <Chk/> */}
+  <Chk/>
   {/* <GraphOrg/> */}
   {/* <ClaimER /> */}
   {/* <EnggQuiz/> */}
