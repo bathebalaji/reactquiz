@@ -6,7 +6,7 @@ function AnswersDiv(props) {
     const handleChange = e => {
       console.log("SEL Value is"+e.target.value);
       setValue(e.target.value);
-      props.setSelectedAnswer(value);
+      props.setSelectedAnswer(e.target.name,props.questId);
     }
     return (
 
@@ -21,7 +21,7 @@ function AnswersDiv(props) {
         
         id={props.answerid }
         src={props.answerContent}
-        disabled={props.disable}
+        disabled={props.selected_answer === props.answerContent? true : false}
         onClick={handleChange}
        
       />

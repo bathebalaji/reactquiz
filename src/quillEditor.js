@@ -18,7 +18,9 @@ import "react-quill/dist/quill.snow.css";
         value={state.value}
         onChange={handleChange}
         placeholder={"Write something awesome..."}
-        modules={modules}
+        modules={{
+          formula:true,
+          modules}}
         formats={formats}
       />
     </div>

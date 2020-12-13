@@ -1,0 +1,154 @@
+ 
+/* ***************************Multichoice****************************************************************************************************** */
+
+
+
+.radioCustomLabel {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 1.5rem 2.5rem 1.5rem 5rem;
+  font-size: 16px;
+  line-height: 1.5;
+ }
+ 
+
+ .radioCustomButton:checked ~ .radioCustomLabel:before {
+  content: '';
+  /* background: #8bc53f url(./svg/icon-check.svg) no-repeat; */
+  background-size: 27px;
+  border-color: #8bc53f;
+ }
+ 
+ /* Animation */
+ .fade-enter {
+  opacity: 0;
+ }
+ 
+ .fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out 0.3s;
+ }
+ 
+ .fade-leave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 1;
+ }
+ 
+ .fade-leave.fade-leave-active {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+ }
+ 
+ .fade-appear {
+  opacity: 0;
+ }
+ 
+ .fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+ }
+ 
+ .optiondiv
+ {
+      text-align: center;
+      border: 1px solid #bbb;
+      padding: 11px 6px;
+      margin-top: 15px;
+ }
+ .correctans
+ {
+      background: #5bc748;
+    color: #fff;
+ }
+ 
+ .wrongans{
+  background: #b32c2c;
+  color: #fff;
+ }
+ 
+ 
+ 
+ .lessoncard
+ {
+  box-shadow : none;
+  margin-bottom : 0px;
+ } */ 
+ 
+ .btn-disable
+        {
+        cursor: not-allowed;
+        pointer-events: none;
+ 
+        /*Button disabled - CSS color class*/
+        color: #c0c0c0;
+        background-color: #ffffff;
+ 
+        }
+ 
+        
+      .imagesizelow {
+        width: 199px;
+        height: 199px;
+    }
+ 
+    /* added for mcimage */
+ 
+    .lessoncard {
+      box-shadow: none;
+      margin-bottom: 0px;
+  }
+ 
+  .card {
+    border-radius: 0;
+    box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+    border: none;
+    margin-bottom: 30px;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+ }
+ 
+ .card-header {
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(0,0,0,.03);
+  border-bottom: 1px solid rgba(0,0,0,.125);
+ }
+ 
+ 
+ 
+ .lessoncard .card-block, .lessoncard .card-body {
+    padding-left: 0;
+    padding-right: 0px;
+    padding-bottom: 6px;
+    padding-top: 17px;
+ }
+ .card .card-block, .card .card-body {
+    padding: 30px 25px;
+ }
+ 
+ .popuptxt h6 {
+  font-weight: bold;
+ }
+ h6 {
+  font-size: 14px;
+ }
+ 
+ .CustomButton {
+  /* background-color: #f4f7fa; */
+   font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #888;
+  padding: 10px 60px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  cursor: pointer;
+  border: 1px solid #bbb;
+  text-align: center;
+  width: 400px !important;
+ } 
+ 
+ 

@@ -18,6 +18,7 @@ import MultiChoice from './multichoice/MultiChoice';
 import MathSym from './finalMath';
 import MathEdit from './EditMath';
  import Qeditor from './quillEditor';
+ import Chk from './ChooseChkBox/MultiChoice'
 
 
 let tempArr = [{"opt1":"Balaji"},{"opt2":"Kumar"} ]
@@ -37,11 +38,12 @@ function App() {
     <div>
   {/* <h4> Grid Map</h4> */}
 {/* <GridMap /> */}
-<Qeditor />
-<MathEdit />
-{/* <MathSym /> */}
+{/* <Qeditor />
+<MathEdit /> */}
+<MathSym />
   {/* <SampleMath /> */}
   {/* <MultiChoice /> */}
+  {/* <Chk/> */}
   {/* <GraphOrg/> */}
   {/* <ClaimER /> */}
   {/* <EnggQuiz/> */}
